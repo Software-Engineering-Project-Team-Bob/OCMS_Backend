@@ -40,11 +40,7 @@ app.use((err, req, res, next) => {
 })
 
 const DB_URL = process.env.MONGO_DB_URI;
-mongoose.connect(DB_URL, 
-{ 
-    useUnifiedTopology: true, 
-    useNewUrlParser: true 
-})
+mongoose.connect(DB_URL)
 .then(result => {
     app.listen(5000);
     console.log("Server started at port 5000");
