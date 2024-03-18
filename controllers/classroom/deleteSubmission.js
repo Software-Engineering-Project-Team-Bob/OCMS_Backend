@@ -16,4 +16,4 @@ const deleteSubmission = (req, res, next) => {
         })
 }
 
-module.exports = deleteSubmission;
+module.exports = {deleteSubmission};

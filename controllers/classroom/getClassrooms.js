@@ -35,4 +35,4 @@ const getClassrooms = (req, res, next) => {
     }
 }
 
-module.exports = getClassrooms;
+module.exports = {getClassrooms};

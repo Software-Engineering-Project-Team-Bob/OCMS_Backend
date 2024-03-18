@@ -25,4 +25,4 @@ const setGrade = (req, res, next) => {
         })
 }
 
-module.exports = setGrade;
+module.exports = {setGrade};

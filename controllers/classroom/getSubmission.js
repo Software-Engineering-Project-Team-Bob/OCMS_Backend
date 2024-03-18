@@ -21,4 +21,4 @@ const getSubmission = (req, res, next) => {
         })
 }
 
-module.exports = getSubmission;
+module.exports = {getSubmission};

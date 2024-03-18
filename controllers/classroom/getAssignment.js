@@ -22,4 +22,4 @@ const getAssignment = (req, res, next) => {
 }
 
 
-module.exports = getAssignment;
+module.exports = {getAssignment};

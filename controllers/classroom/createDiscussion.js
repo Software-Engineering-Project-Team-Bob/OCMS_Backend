@@ -27,4 +27,4 @@ const createDiscussion = (req, res, next) => {
 }
 
 
-module.exports = createDiscussion;
+module.exports = {createDiscussion};

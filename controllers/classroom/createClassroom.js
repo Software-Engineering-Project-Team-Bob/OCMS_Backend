@@ -42,4 +42,4 @@ const createClassroom = async (req, res, next) => {
         })
 }
 
-module.exports = createClassroom;
+module.exports = {createClassroom};

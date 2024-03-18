@@ -24,22 +24,22 @@ const  setGrade = require('../controllers/classroom/setGrade');
 
 
 
-router.post('/createClassroom', createClassroom);
-router.post('/getClassrooms', isAuth, getClassrooms);
-router.post('/joinClassroom', joinClassroom);
-router.post('/getClassroom', getClassroom);
-router.delete('/deleteClassroom', deleteClassroom);
-router.post('/createDiscussion', createDiscussion);
-router.post('/getDiscussions', getDiscussions);
-router.post('/createAssignment', createAssignment);
-router.post('/getAssignments', getAssignments);
-router.post('/getAssignment', getAssignment);
-router.post('/getReminders', getReminders);
-router.post('/getAttendees', getAttendees);
-router.post('/submitAssignment', submitAssignment);
-router.post('/getSubmission', getSubmission);
-router.delete('/deleteSubmission', deleteSubmission);
-router.post('/getSubmissions', getSubmissions);
-router.post('/setGrade', setGrade);
+router.post('/createClassroom', createClassroom.createClassroom);
+router.post('/getClassrooms', isAuth, getClassrooms.getClassrooms);
+router.post('/joinClassroom', joinClassroom.joinClassroom);
+router.post('/getClassroom', getClassroom.getClassroom);
+router.delete('/deleteClassroom', deleteClassroom.deleteClassroom);
+router.post('/createDiscussion', createDiscussion.createDiscussion);
+router.post('/getDiscussions', getDiscussions.getDiscussions);
+router.post('/createAssignment', createAssignment.createAssignment);
+router.post('/getAssignments', getAssignments.getAssignments);
+router.post('/getAssignment', getAssignment.getAssignment);
+router.post('/getReminders', getReminders.getReminders);
+router.post('/getAttendees', getAttendees.getAttendees);
+router.post('/submitAssignment', submitAssignment.submitAssignment);
+router.post('/getSubmission', getSubmission.getSubmission);
+router.delete('/deleteSubmission', deleteSubmission.deleteSubmission);
+router.post('/getSubmissions', getSubmissions.getSubmissions);
+router.post('/setGrade', setGrade.setGrade);
 
 module.exports = router; 

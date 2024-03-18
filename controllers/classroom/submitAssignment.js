@@ -27,4 +27,4 @@ const submitAssignment = (req, res, next) => {
         })
 }
 
-module.exports = submitAssignment;
+module.exports = {submitAssignment};

@@ -50,4 +50,4 @@ const deleteClassroom = (req, res, next) => {
         })
 }
 
-module.exports = deleteClassroom;
+module.exports = {deleteClassroom};

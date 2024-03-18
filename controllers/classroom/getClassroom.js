@@ -19,4 +19,4 @@ const getClassroom = (req, res, next) => {
         })
 }
 
-module.exports = getClassroom;
+module.exports = {getClassroom};

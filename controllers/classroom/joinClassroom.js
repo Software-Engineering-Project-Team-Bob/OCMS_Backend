@@ -43,4 +43,4 @@ const joinClassroom = (req, res, next) => {
         })
 }
 
-module.exports = joinClassroom;
+module.exports = {joinClassroom};

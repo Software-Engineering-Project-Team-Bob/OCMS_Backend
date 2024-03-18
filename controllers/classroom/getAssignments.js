@@ -13,4 +13,4 @@ const getAssignments = (req, res, next) => {
         })
 }
 
-module.exports = getAssignments;
+module.exports = {getAssignments};

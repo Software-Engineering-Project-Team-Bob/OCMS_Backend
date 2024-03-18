@@ -13,4 +13,4 @@ const getDiscussions = (req, res, next) => {
         })
 }
 
-module.exports = getDiscussions;
+module.exports = {getDiscussions};

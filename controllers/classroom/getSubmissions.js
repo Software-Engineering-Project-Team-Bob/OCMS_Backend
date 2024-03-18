@@ -12,4 +12,4 @@ const getSubmissions = (req, res, next) => {
         })
 }
 
-module.exports = getSubmissions;
+module.exports = {getSubmissions};

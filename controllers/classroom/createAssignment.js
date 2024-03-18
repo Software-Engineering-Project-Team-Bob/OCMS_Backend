@@ -30,4 +30,4 @@ const createAssignment = (req, res, next) => {
         })
 }
 
-module.exports = createAssignment;
+module.exports = {createAssignment};

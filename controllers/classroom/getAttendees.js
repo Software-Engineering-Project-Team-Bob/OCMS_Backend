@@ -23,4 +23,4 @@ const getAttendees = (req, res, next) => {
         })
 }
 
-module.exports = getAttendees;
+module.exports = {getAttendees};

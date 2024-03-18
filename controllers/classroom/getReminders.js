@@ -29,4 +29,4 @@ const getReminders = (req, res, next) => {
         })
 }
 
-module.exports = getReminders;
+module.exports = {getReminders};
