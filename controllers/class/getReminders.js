@@ -4,7 +4,7 @@ const User = require('../../models/user');
 const Assignment = require('../../models/assignment');
 
 
-exports.getReminders = (req, res, next) => {
+const getReminders = (req, res, next) => {
     const userEmail = req.body.userEmail;
     let reminders = [];
     User.findOne({email: userEmail})
@@ -28,3 +28,5 @@ exports.getReminders = (req, res, next) => {
             next(err);
         })
 }
+
+module.exports = getReminders;
