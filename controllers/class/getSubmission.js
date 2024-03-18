@@ -2,7 +2,7 @@ const ObjectId = require('mongoose').Types.ObjectId;
 
 const Submission = require('../../models/submission');
 
-exports.getSubmission = (req, res, next) => {
+const getSubmission = (req, res, next) => {
     const assignmentId = req.body.assignmentId;
     const userEmail = req.body.userEmail;
     
@@ -20,3 +20,5 @@ exports.getSubmission = (req, res, next) => {
             next(err);
         })
 }
+
+module.exports = getSubmission;
