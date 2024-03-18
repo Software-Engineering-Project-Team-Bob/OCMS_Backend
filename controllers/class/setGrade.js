@@ -1,7 +1,7 @@
 
 const Submission = require('../../models/submission');
 
-exports.setGrade = (req, res, next) => {
+const setGrade = (req, res, next) => {
     const submissionId = req.body.submissionId;
     const grade = req.body.grade;
     Submission.findById(submissionId)
@@ -24,3 +24,5 @@ exports.setGrade = (req, res, next) => {
             next(err);
         })
 }
+
+module.exports = setGrade;
