@@ -5,7 +5,7 @@ const User = require('../../models/user');
 const Discussion = require('../../models/discussion');
 
 
-exports.deleteClassroom = (req, res, next) => {
+const deleteClassroom = (req, res, next) => {
     const classCode = req.body.classCode;
     // console.log(classCode);
     Classroom.findOneAndDelete({classCode: classCode})
@@ -49,3 +49,5 @@ exports.deleteClassroom = (req, res, next) => {
             next(err);
         })
 }
+
+module.exports = deleteClassroom;
