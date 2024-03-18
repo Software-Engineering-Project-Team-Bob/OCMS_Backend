@@ -38,12 +38,12 @@ app.use((err, req, res, next) => {
 })
 
 const DB_URL = process.env.MONGO_DB_URI;
-const PORT= process.env.PORT || 4000;
+const PORT= process.env.PORT || 5000;
 mongoose.connect(DB_URL)
 .then(result => {
     app.listen(5000);
-    console.log("Server started at port 4000");
-    console.log("http://localhost:4000");
+    console.log("Server started at port 5000");
+    console.log("http://localhost:5000");
 })
 .catch(err => {
     console.log(err);
