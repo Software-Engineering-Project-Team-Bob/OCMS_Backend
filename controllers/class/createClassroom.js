@@ -5,7 +5,7 @@ const classCode = require('../../models/classCode');
 const User = require('../../models/user');
 
 
-exports.createClassroom = async (req, res, next) => {
+const createClassroom = async (req, res, next) => {
     let currClassCode;
     await classCode.findOne().sort({code: -1}).then(obj => {
         console.log(code);
@@ -41,3 +41,5 @@ exports.createClassroom = async (req, res, next) => {
             next(err);
         })
 }
+
+module.exports = createClassroom;
