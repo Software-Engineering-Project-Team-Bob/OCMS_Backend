@@ -5,7 +5,7 @@ const Classroom = require('../../models/classroom');
 const User = require('../../models/user');
 
 
-exports.getClassrooms = (req, res, next) => {
+const getClassrooms = (req, res, next) => {
     const type = req.body.type;
     const userEmail = req.body.userEmail;
     if (type === "owned") {
@@ -34,3 +34,5 @@ exports.getClassrooms = (req, res, next) => {
         next(err);
     }
 }
+
+module.exports = getClassrooms;
