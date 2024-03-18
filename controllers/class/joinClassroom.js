@@ -1,4 +1,10 @@
 
+
+const Classroom = require('../../models/classroom');
+
+const User = require('../../models/user');
+
+
 exports.joinClassroom = (req, res, next) => {
     const userEmail = req.body.userEmail;
     const classCode = req.body.classCode;

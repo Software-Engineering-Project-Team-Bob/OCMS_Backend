@@ -1,3 +1,6 @@
+
+const Submission = require('../../models/submission');
+
 exports.submitAssignment = (req, res, next) => {
     const studentName = req.body.studentName;
     const studentEmail = req.body.studentEmail;

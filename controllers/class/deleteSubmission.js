@@ -1,3 +1,8 @@
+
+const ObjectId = require('mongoose').Types.ObjectId; 
+
+const Submission = require('../../models/submission');
+
 exports.deleteSubmission = (req, res, next) => {
     const assignmentId = req.body.assignmentId;
     const userEmail = req.body.userEmail;

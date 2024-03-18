@@ -1,3 +1,9 @@
+
+const User = require('../../models/user');
+
+const Assignment = require('../../models/assignment');
+
+
 exports.getReminders = (req, res, next) => {
     const userEmail = req.body.userEmail;
     let reminders = [];

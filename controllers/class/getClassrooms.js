@@ -1,5 +1,10 @@
 
 
+const Classroom = require('../../models/classroom');
+
+const User = require('../../models/user');
+
+
 exports.getClassrooms = (req, res, next) => {
     const type = req.body.type;
     const userEmail = req.body.userEmail;

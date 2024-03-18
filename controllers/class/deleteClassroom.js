@@ -1,4 +1,10 @@
 
+
+const Classroom = require('../../models/classroom');
+const User = require('../../models/user');
+const Discussion = require('../../models/discussion');
+
+
 exports.deleteClassroom = (req, res, next) => {
     const classCode = req.body.classCode;
     // console.log(classCode);

@@ -1,3 +1,7 @@
+
+const Discussion = require('../../models/discussion');
+
+
 exports.createDiscussion = (req, res, next) => {
     const creatorName = req.body.creatorName;
     const creatorEmail = req.body.creatorEmail;

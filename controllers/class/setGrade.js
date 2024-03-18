@@ -1,3 +1,6 @@
+
+const Submission = require('../../models/submission');
+
 exports.setGrade = (req, res, next) => {
     const submissionId = req.body.submissionId;
     const grade = req.body.grade;

@@ -1,3 +1,9 @@
+
+const User = require('../../models/user');
+
+const Assignment = require('../../models/assignment');
+
+
 exports.getAssignment = (req, res, next) => {
     const assignmentId = req.body.assignmentId;
     Assignment.findById(assignmentId)

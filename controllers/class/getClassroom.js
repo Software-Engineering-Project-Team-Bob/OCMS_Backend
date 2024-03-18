@@ -1,4 +1,8 @@
 
+
+const Classroom = require('../../models/classroom');
+
+
 exports.getClassroom = (req, res, next) => {
     const classCode = req.body.classCode;
     Classroom.findOne({classCode: classCode})

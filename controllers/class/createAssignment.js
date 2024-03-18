@@ -1,3 +1,7 @@
+
+const Assignment = require('../../models/assignment');
+
+
 exports.createAssignment = (req, res, next) => {
     // console.log(req.body);
 
