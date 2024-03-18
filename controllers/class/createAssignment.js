@@ -2,7 +2,7 @@
 const Assignment = require('../../models/assignment');
 
 
-exports.createAssignment = (req, res, next) => {
+const createAssignment = (req, res, next) => {
     // console.log(req.body);
 
     const classCode = req.body.classCode;
@@ -29,3 +29,5 @@ exports.createAssignment = (req, res, next) => {
             next(err);
         })
 }
+
+module.exports = createAssignment;
