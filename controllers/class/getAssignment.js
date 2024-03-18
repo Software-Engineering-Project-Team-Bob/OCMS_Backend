@@ -4,7 +4,7 @@ const User = require('../../models/user');
 const Assignment = require('../../models/assignment');
 
 
-exports.getAssignment = (req, res, next) => {
+const getAssignment = (req, res, next) => {
     const assignmentId = req.body.assignmentId;
     Assignment.findById(assignmentId)
         .then(assignment => {
@@ -20,3 +20,6 @@ exports.getAssignment = (req, res, next) => {
             next(err);
         })
 }
+
+
+module.exports = getAssignment;
