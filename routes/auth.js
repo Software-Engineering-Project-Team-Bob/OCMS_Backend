@@ -2,10 +2,12 @@ const express = require('express');
 
 const router = express.Router();
 
-const authController = require('../controllers/auth');
+const signup = require('../controllers/auth/signUp');
+const signin = require('../controllers/auth/signIn');
+const verifyToken = require('../controllers/auth/verifyToken');
 
-router.post('/signup', authController.signup)
-router.post('/signin', authController.signin);
-router.post('/verifyToken', authController.verifyToken);
+router.post('/signup', signup)
+router.post('/signin', signin);
+router.post('/verifyToken', verifyToken);
 
 module.exports = router; 

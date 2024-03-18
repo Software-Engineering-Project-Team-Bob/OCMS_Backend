@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User=require('../../models/user')
 
-exports.verifyToken = (req, res, next) => {
+const verifyToken = (req, res, next) => {
     const token = req.body.token;
     let decodedToken;
     try {
@@ -14,3 +14,5 @@ exports.verifyToken = (req, res, next) => {
         next(err);
     }
 }
+
+module.exports = verifyToken;
