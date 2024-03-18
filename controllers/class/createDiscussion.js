@@ -2,7 +2,7 @@
 const Discussion = require('../../models/discussion');
 
 
-exports.createDiscussion = (req, res, next) => {
+const createDiscussion = (req, res, next) => {
     const creatorName = req.body.creatorName;
     const creatorEmail = req.body.creatorEmail;
     const classCode = req.body.classCode;
@@ -25,3 +25,6 @@ exports.createDiscussion = (req, res, next) => {
             next(err);
         })
 }
+
+
+module.exports = createDiscussion;
