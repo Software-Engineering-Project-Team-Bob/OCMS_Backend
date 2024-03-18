@@ -2,7 +2,7 @@
 const Discussion = require('../../models/discussion');
 
 
-exports.getDiscussions = (req, res, next) => {
+const getDiscussions = (req, res, next) => {
     const classCode = req.body.classCode;
     Discussion.find({classCode: classCode})
         .then(discussions => {
@@ -12,3 +12,5 @@ exports.getDiscussions = (req, res, next) => {
             next(err);
         })
 }
+
+module.exports = getDiscussions;
