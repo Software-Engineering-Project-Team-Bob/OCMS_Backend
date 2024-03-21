@@ -17,7 +17,7 @@ const authRoutes = require('./routes/auth');
 app.use('/classes', classroomRoutes);
 app.use('/auth', authRoutes);
 app.get('/', (req, res) => {
-    res.send("Welcome to OCMS Backend");
+    res.send("Welcome to OCMS Backend for Software Engineering Project ");
 })
 
 // if ( process.env.NODE_ENV === "production" || 1) { 
