@@ -16,6 +16,9 @@ const authRoutes = require('./routes/auth');
 
 app.use('/classes', classroomRoutes);
 app.use('/auth', authRoutes);
+app.get('/', (req, res) => {
+    res.send("Welcome to OCMS Backend");
+})
 
 // if ( process.env.NODE_ENV === "production" || 1) { 
 //     app.use(express.static(path.join(__dirname, "../client/build"))); 
@@ -42,7 +45,7 @@ const PORT= process.env.PORT || 5000;
 mongoose.connect(DB_URL)
 .then(result => {
     console.log("Connected to database");
-    app.listen(5000);
+    app.listen(5000,()=>console.log("Welcome to OCMS Backend"));
     console.log("Server started at port 5000");
     console.log("http://localhost:5000");
 })
