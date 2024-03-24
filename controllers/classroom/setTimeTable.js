@@ -13,28 +13,26 @@ const setTimeTable = async (req, res, next) => {
 
 
         if (!day || !time) {
-            return res.status(400).json({ error: "Day and time are required" });
+            return res.status(209).json({ error: "Day and time are required" });
         }
 
         const lowercaseDay = day.toLowerCase();
 
 
         if (!["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].includes(lowercaseDay)) {
-            return res.status(400).json({ error: "Day should be a valid day" });
+            return res.status(209).json({ error: "Day should be a valid day" });
         }
 
 
         if (!(startTime1 >= 0 && startTime1 < 24 && startTime2 >= 0 && startTime2 < 60 && endTime1 >= 0 && endTime1 < 24 && endTime2 >= 0 && endTime2 < 60)) {
-            return res.status(400).json({ error: "Time should be in the format HH:MM-HH:MM" });
+            return res.status(209).json({ error: "Time should be in the format HH:MM-HH:MM" });
         }
         if (startTime1 > endTime1) {
-            return res.status(400).json({ error: "End time should be greater than start time" });
+            return res.status(209).json({ error: "End time should be greater than start time" });
         }
         if (startTime1 === endTime1 && startTime2 >= endTime2) {
-            return res.status(400).json({ error: "End time should be greater than start time" });
+            return res.status(209).json({ error: "End time should be greater than start time" });
         }
-
-
 
         const timetable = await Calender.findOne({ classCode: classCode });
 
