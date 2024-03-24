@@ -15,10 +15,21 @@ const getTimeTable = async (req, res, next) => {
             return res.status(209).json({ message: "Timetable not found" });
         }
 
+        //use the get classroom apui to get the classroom details
+        const classroom = await Classroom.findOne({ classCode });
+        if (!classroom) {
+            return res.status(209).json({ message: "Classroom not found" });
+        }
+
+
+
+
+
         const filteredTimeTable = {
             timetable: timetable.timetable,
             classCode: timetable.classCode,
-            message: "success Fetched Timetable" 
+            className: classroom.className,
+            message: "success Fetched Timetable"
         }
 
         res.status(200).json({ data: filteredTimeTable });
