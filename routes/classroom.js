@@ -24,6 +24,7 @@ const  setGrade = require('../controllers/classroom/setGrade');
 const  setcalender = require('../controllers/classroom/createcalenderteacher');
 const  getcalender = require('../controllers/classroom/createcalender');
 
+// const getGrade=require('../controllers/classroom/getGrade');
 
 
 router.post('/createClassroom', createClassroom.createClassroom);
@@ -45,5 +46,7 @@ router.post('/getSubmissions', getSubmissions.getSubmissions);
 router.post('/setGrade', setGrade.setGrade);
 router.post('/setcalender', setcalender.setcalender);
 router.post('/getcalender', getcalender.getcalender);
+
+// router.post("/getGrade",getGrade.getGrade);
 
 module.exports = router; 
