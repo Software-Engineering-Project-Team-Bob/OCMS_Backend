@@ -1,4 +1,5 @@
 const Calender = require('../../models/calender');
+const Classroom = require('../../models/classroom');
 
 const getTimeTable = async (req, res, next) => {
     try {
@@ -20,9 +21,6 @@ const getTimeTable = async (req, res, next) => {
         if (!classroom) {
             return res.status(209).json({ message: "Classroom not found" });
         }
-
-
-
 
 
         const filteredTimeTable = {
