@@ -3,6 +3,7 @@
 const Classroom = require('../../models/classroom');
 const classCode = require('../../models/classCode');
 const User = require('../../models/user');
+const Calender=require('../../models/calender');
 
 
 const createClassroom = async (req, res, next) => {
@@ -26,11 +27,21 @@ const createClassroom = async (req, res, next) => {
         classLevel: req.body.classLevel
     })
     
+        const newCalender = new Calender({
+            classCode: currClassCode
+        })
+    
     newClassroom.save()
         .then(result => {
             User.findOne({email: req.body.adminEmail}).then(user => {
                 user.classesOwned.push(currClassCode);
                 user.save();
+
+                newCalender.save().then(result => {
+                    console.log("Calender created successfully");
+                }).catch(err => {
+                    next(err);
+                })
             }).catch(err => {
                 next(err);
             })
@@ -39,6 +50,8 @@ const createClassroom = async (req, res, next) => {
         .catch(err => {
             next(err);
         })
+    
+   
 }
 
 module.exports = {createClassroom};

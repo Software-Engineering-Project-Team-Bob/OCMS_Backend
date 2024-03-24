@@ -21,6 +21,8 @@ const  getSubmission = require('../controllers/classroom/getSubmission');
 const  deleteSubmission = require('../controllers/classroom/deleteSubmission');
 const  getSubmissions = require('../controllers/classroom/getSubmissions');
 const  setGrade = require('../controllers/classroom/setGrade');
+const getTimeTable = require('../controllers/classroom/getTimeTable');
+const setTimeTable = require('../controllers/classroom/setTimeTable');
 
 // const getGrade=require('../controllers/classroom/getGrade');
 
@@ -42,7 +44,12 @@ router.post('/getSubmission', getSubmission.getSubmission);
 router.delete('/deleteSubmission', deleteSubmission.deleteSubmission);
 router.post('/getSubmissions', getSubmissions.getSubmissions);
 router.post('/setGrade', setGrade.setGrade);
+router.post('/getTimeTable', getTimeTable.getTimeTable);
+router.post('/setTimeTable', setTimeTable.setTimeTable);
 
 // router.post("/getGrade",getGrade.getGrade);
+
+
+
 
 module.exports = router; 
