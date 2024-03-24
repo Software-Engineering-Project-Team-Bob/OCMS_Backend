@@ -25,7 +25,7 @@ const getTimeTable = async (req, res, next) => {
             classCode:timetable.classCode
         }
 
-        res.status(200).json({data:filteredTimeTable,message:"success Fetched Timetable"});
+        res.status(200).json({data:filteredTimeTable},{message:"success Fetched Timetable"});
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Server error" });
