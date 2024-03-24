@@ -45,7 +45,7 @@ const setTimeTable = async (req, res, next) => {
         timetable.timetable.push(data);
         await timetable.save();
 
-        res.status(200).json({ data: timetable},{ message: "Successfully updated TimeTable" });
+        res.status(200).json({ data: timetable});
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Server error" });
