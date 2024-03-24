@@ -10,19 +10,15 @@ const setTimeTable = async (req, res, next) => {
         const endTime1 = parseInt(endTime.slice(0, 2));
         const endTime2 = parseInt(endTime.slice(3, 5));
 
-
-
         if (!day || !time) {
             return res.status(209).json({ message: "Day and time are required" });
         }
 
         const lowercaseDay = day.toLowerCase();
 
-
         if (!["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].includes(lowercaseDay)) {
             return res.status(209).json({ message: "Day should be a valid day" });
         }
-
 
         if (!(startTime1 >= 0 && startTime1 < 24 && startTime2 >= 0 && startTime2 < 60 && endTime1 >= 0 && endTime1 < 24 && endTime2 >= 0 && endTime2 < 60)) {
             return res.status(209).json({ message: "Time should be in the format HH:MM-HH:MM" });
@@ -45,7 +41,6 @@ const setTimeTable = async (req, res, next) => {
             day: day,
             time: time
         }
-
 
         timetable.timetable.push(data);
         await timetable.save();
