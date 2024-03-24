@@ -5,6 +5,7 @@ const calender = require('../../models/calender');
 const getcalender = async (req, res, next) => {
     try {
         const classCode = req.body.classCode;
+        console.log(classCode);
 
       
         if (!classCode) {

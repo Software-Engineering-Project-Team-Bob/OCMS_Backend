@@ -8,7 +8,6 @@ const User = require('../../models/user');
 const createClassroom = async (req, res, next) => {
     let currClassCode;
     await classCode.findOne().sort({code: -1}).then(obj => {
-        console.log(code);
         currClassCode = obj ? obj.code + 1 : 1;
         const newClassCode = new classCode({ code: currClassCode });
         newClassCode.save();
