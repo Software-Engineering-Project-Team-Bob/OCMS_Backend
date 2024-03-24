@@ -6,10 +6,13 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
+const pagesPath = path.join(__dirname, 'pages');
 
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static(pagesPath));
+
 
 const classroomRoutes = require('./routes/classroom');
 const authRoutes = require('./routes/auth');
@@ -17,7 +20,8 @@ const authRoutes = require('./routes/auth');
 app.use('/classes', classroomRoutes);
 app.use('/auth', authRoutes);
 app.get('/', (req, res) => {
-    res.send("Welcome to OCMS Backend for Software Engineering Project ");
+    // res.send("Welcome to OCMS Backend for Software Engineering Project ");
+    res.sendFile(path.join(pagesPath, 'WelcomePage.html'));
 })
 
 // if ( process.env.NODE_ENV === "production" || 1) { 
