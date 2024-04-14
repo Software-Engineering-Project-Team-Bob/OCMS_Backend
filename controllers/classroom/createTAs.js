@@ -17,6 +17,7 @@ const createTAs=(req,res,next)=>{
             next(err);
         }
         classroom.TAs.push(TAs);
+        classroom.members.push(TAs);
         return classroom.save();
     })
     .then(result=>{
