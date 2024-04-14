@@ -34,7 +34,8 @@ const classroomSchema = new Schema({
             type: String,
             required: true
         },
-        members: [String]
+        members: [String],
+        TAs: [String]
     },
     {
         timestamps: true,

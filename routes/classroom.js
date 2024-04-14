@@ -23,6 +23,7 @@ const  getSubmissions = require('../controllers/classroom/getSubmissions');
 const  setGrade = require('../controllers/classroom/setGrade');
 const getTimeTable = require('../controllers/classroom/getTimeTable');
 const setTimeTable = require('../controllers/classroom/setTimeTable');
+const createTAs = require('../controllers/classroom/createTAs');
 
 // const getGrade=require('../controllers/classroom/getGrade');
 
@@ -46,6 +47,7 @@ router.post('/getSubmissions', getSubmissions.getSubmissions);
 router.post('/setGrade', setGrade.setGrade);
 router.post('/getTimeTable', getTimeTable.getTimeTable);
 router.post('/setTimeTable', setTimeTable.setTimeTable);
+router.post('/createTAs', createTAs.createTAs);
 
 // router.post("/getGrade",getGrade.getGrade);
 
