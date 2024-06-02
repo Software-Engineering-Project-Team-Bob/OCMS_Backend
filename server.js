@@ -8,8 +8,14 @@ const bodyParser = require('body-parser');
 const app = express();
 const pagesPath = path.join(__dirname, 'pages');
 
+
+const corsOptions = {
+  origin: 'http://ocms-frontend.vercel.app',
+  optionsSuccessStatus: 200 
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
-app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(pagesPath));
 
