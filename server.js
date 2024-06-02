@@ -11,7 +11,9 @@ const pagesPath = path.join(__dirname, 'pages');
 
 const corsOptions = {
   origin: 'http://ocms-frontend.vercel.app',
-  optionsSuccessStatus: 200 
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
 };
 
 app.use(cors(corsOptions));
