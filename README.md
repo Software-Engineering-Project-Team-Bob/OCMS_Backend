@@ -25,9 +25,5 @@ Specify the Port  number in the env file
 
 The Backend Server runs on localhost 5000(default) in each system currently.
 
-Contact :-
-Sumit Kumar
 
-Email-sumitkanpur2005@gmail.com
 
-Phone Number:-7376910003
